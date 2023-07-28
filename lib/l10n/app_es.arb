@@ -1,0 +1,13 @@
+{
+    "appName": "Barosv Contacts List",
+    "@appName": {"description": "App name"},
+
+    "infoContactCreated": "El contacto \"{name}\" ha sido creado",
+    "@infoContactCreated": {"description": "Mensaje informativo indicando que el contacto ha sido creado",
+        "placeholders": {
+            "name": {
+                "type": "String"
+            }
+        }
+    }
+}

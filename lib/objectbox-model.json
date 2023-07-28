@@ -1,0 +1,77 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:5826597131282115451",
+      "lastPropertyId": "10:807977448197609356",
+      "name": "Contact",
+      "properties": [
+        {
+          "id": "1:2838729798362250537",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:8625237150725837953",
+          "name": "contactID",
+          "type": 9
+        },
+        {
+          "id": "3:3752416981209575034",
+          "name": "firstName",
+          "type": 9
+        },
+        {
+          "id": "4:2146203206849032635",
+          "name": "lastName",
+          "type": 9
+        },
+        {
+          "id": "5:7111083152560853494",
+          "name": "phoneNumber",
+          "type": 9
+        },
+        {
+          "id": "6:3339060870858391043",
+          "name": "streetAddress1",
+          "type": 9
+        },
+        {
+          "id": "7:3909831762858865611",
+          "name": "streetAddress2",
+          "type": 9
+        },
+        {
+          "id": "8:5188905493197189001",
+          "name": "city",
+          "type": 9
+        },
+        {
+          "id": "9:2914235938131459631",
+          "name": "state",
+          "type": 9
+        },
+        {
+          "id": "10:807977448197609356",
+          "name": "zipCode",
+          "type": 9
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "1:5826597131282115451",
+  "lastIndexId": "0:0",
+  "lastRelationId": "0:0",
+  "lastSequenceId": "0:0",
+  "modelVersion": 5,
+  "modelVersionParserMinimum": 5,
+  "retiredEntityUids": [],
+  "retiredIndexUids": [],
+  "retiredPropertyUids": [],
+  "retiredRelationUids": [],
+  "version": 1
+}
