@@ -26,12 +26,22 @@ class ContactsBloc extends Bloc<ContactsEvent, ContactsState> {
     final contacts = getIt.get<ContactsController>().search(
           search: event.search,
         );
-    emit(ContactsDone(contacts));
+
+    if (contacts.isEmpty) {
+      emit(const ContactsSearchEmpty());
+    } else {
+      emit(ContactsDone(contacts));
+    }
   }
 
   void onGetAll(GetAll event, Emitter<ContactsState> emit) {
     final contacts = getIt.get<ContactsController>().getAll();
-    emit(ContactsDone(contacts));
+
+    if (contacts.isEmpty) {
+      emit(const ContactsEmpty());
+    } else {
+      emit(ContactsDone(contacts));
+    }
   }
 
   void onGet(Get event, Emitter<ContactsState> emit) {

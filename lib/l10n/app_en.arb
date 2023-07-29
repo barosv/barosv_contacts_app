@@ -5,6 +5,9 @@
     "addAddress": "add address",
     "@addAddress": {"description": "add address"},
     
+    "address": "address",
+    "@address": {"description": "address"},
+    
     "streetAddress1": "Street Address 1",
     "@streetAddress1": {"description": "Street Address 1"},
     
@@ -17,8 +20,14 @@
     "cancel": "Cancel",
     "@cancel": {"description": "Cancel"},
     
+    "call": "call",
+    "@call": {"description": "call"},
+    
     "city": "City",
     "@city": {"description": "City"},
+    
+    "contactError": "Error getting Contact info",
+    "@contactError": {"description": "Message indicating error getting the Contact info."},
     
     "contacts": "Contacts",
     "@contacts": {"description": "Contacts"},
@@ -29,6 +38,9 @@
     "done": "Done",
     "@done": {"description": "Done"},
     
+    "edit": "Edit",
+    "@edit": {"description": "Edit"},
+    
     "firstName": "First name",
     "@firstName": {"description": "First name"},
     
@@ -37,6 +49,12 @@
     
     "lastName": "Last name",
     "@lastName": {"description": "Last name"},
+    
+    "mail": "mail",
+    "@mail": {"description": "mail"},
+    
+    "message": "message",
+    "@message": {"description": "message"},
     
     "mobile": "mobile",
     "@mobile": {"description": "mobile"},
@@ -55,6 +73,9 @@
     
     "state": "State",
     "@state": {"description": "State"},
+    
+    "video": "video",
+    "@video": {"description": "video"},
     
     "zipCode": "Zip Code",
     "@zipCode": {"description": "Zip Code"},

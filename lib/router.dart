@@ -1,3 +1,4 @@
+import 'package:barosv_contacts_app/features/contacts/data/models/contact.dart';
 import 'package:go_router/go_router.dart';
 
 import 'package:barosv_contacts_app/features/contacts/presentation/pages/contacts_save_page/contacts_save_page.dart';
@@ -28,7 +29,9 @@ final router = GoRouter(
     ),
     GoRoute(
       path: contactsViewPageId,
-      builder: (context, state) => const ContactsViewPage(),
+      builder: (context, state) => ContactsViewPage(
+        contact: state.extra as Contact?,
+      ),
     ),
   ],
 );

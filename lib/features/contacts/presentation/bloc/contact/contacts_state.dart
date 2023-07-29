@@ -15,6 +15,14 @@ class ContactsDone extends ContactsState {
   const ContactsDone(List<Contact> contacts) : super(contacts: contacts);
 }
 
+class ContactsEmpty extends ContactsState {
+  const ContactsEmpty();
+}
+
+class ContactsSearchEmpty extends ContactsState {
+  const ContactsSearchEmpty();
+}
+
 class ContactDone extends ContactsState {
   const ContactDone(Contact? contact) : super(contact: contact);
 }

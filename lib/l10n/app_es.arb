@@ -5,6 +5,9 @@
     "addAddress": "agregar dirección",
     "@addAddress": {"description": "agregar dirección"},
     
+    "address": "dirección",
+    "@address": {"description": "dirección"},
+    
     "streetAddress1": "Dirección calle 1",
     "@streetAddress1": {"description": "Dirección calle 1"},
     
@@ -17,8 +20,14 @@
     "cancel": "Cancelar",
     "@cancel": {"description": "Cancelar"},
     
+    "call": "llamar",
+    "@call": {"description": "llamar"},
+    
     "city": "Ciudad",
     "@city": {"description": "Ciudad"},
+    
+    "contactError": "Error obteniendo la información del Contacto.",
+    "@contactError": {"description": "Mensaje indicando que no se pudo obtener la información del contacto"},
     
     "contacts": "Contactos",
     "@contacts": {"description": "Contactos"},
@@ -29,6 +38,9 @@
     "done": "Finalizar",
     "@done": {"description": "Finalizar"},
     
+    "edit": "Editar",
+    "@edit": {"description": "Editar"},
+    
     "firstName": "Nombre",
     "@firstName": {"description": "Nombre"},
     
@@ -37,6 +49,12 @@
     
     "lastName": "Apellidos",
     "@lastName": {"description": "Apellidos"},
+    
+    "mail": "correo",
+    "@mail": {"description": "correo"},
+    
+    "message": "mensaje",
+    "@message": {"description": "mensaje"},
     
     "mobile": "móvil",
     "@mobile": {"description": "móvil"},
@@ -55,6 +73,9 @@
     
     "state": "Estado/Provincia",
     "@state": {"description": "Estado/Provincia"},
+    
+    "video": "video",
+    "@video": {"description": "video"},
     
     "zipCode": "Código Postal",
     "@zipCode": {"description": "Código Postal"},

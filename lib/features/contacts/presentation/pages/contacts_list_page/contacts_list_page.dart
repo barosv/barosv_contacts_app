@@ -59,43 +59,44 @@ class _ContactsListPageState extends State<ContactsListPage> {
         ),
         body: BlocBuilder<ContactsBloc, ContactsState>(
           builder: (_, state) {
+            // LOADING
             if (state is ContactsLoading) {
               return const Center(
                 child: CupertinoActivityIndicator(color: Colors.white),
               );
             }
 
-            if (state is ContactsDone) {
-              return Column(
-                children: [
-                  SearchInput(
-                    onCancel: () {
-                      _search = '';
-                      context.read<ContactsBloc>().add(const GetAll());
-                    },
-                    onChanged: (value) {
-                      _search = value;
-                      context.read<ContactsBloc>().add(Search(search: value));
-                    },
-                  ),
-                  const SizedBox(height: 10.0),
+            return Column(
+              children: [
+                // Search box
+                SearchInput(
+                  onCancel: () {
+                    _search = '';
+                    context.read<ContactsBloc>().add(const GetAll());
+                  },
+                  onChanged: (value) {
+                    _search = value;
+                    context.read<ContactsBloc>().add(Search(search: value));
+                  },
+                ),
+                const SizedBox(height: 10.0),
 
-                  // SEARCH WITH NO RESULTS
-                  if (state.contacts!.isEmpty && _search.isNotEmpty)
-                    NoSearchResults(_search),
+                // Contacts result
+                Expanded(
+                  child:
+                      // Contacts Empty
+                      state is ContactsEmpty
+                          ? const NoResults()
 
-                  if (state.contacts!.isEmpty && _search.isEmpty)
-                    const NoResults(),
+                          // Searc Contacts Empty
+                          : state is ContactsSearchEmpty
+                              ? NoSearchResults(_search)
 
-                  if (state.contacts!.isNotEmpty)
-                    Expanded(
-                      child: ContactsList(list: state.contacts!),
-                    ),
-                ],
-              );
-            }
-
-            return const SizedBox.shrink();
+                              // List of Contacts
+                              : ContactsList(list: state.contacts!),
+                ),
+              ],
+            );
           },
         ),
       ),

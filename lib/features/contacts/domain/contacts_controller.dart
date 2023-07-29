@@ -69,4 +69,17 @@ class ContactsController {
 
   // Delete all
   int deleteAll() => getIt.get<ContactsRepository>().deleteAll();
+
+  // Gets the letters to show instead of an image
+  String? getContactLetters(Contact? contact) {
+    if (contact == null) return null;
+
+    if (contact.firstName.isEmpty && contact.lastName.isEmpty) return null;
+
+    final firstLetter =
+        contact.firstName.isNotEmpty ? contact.firstName[0] : '';
+    final secondLetter = contact.lastName.isNotEmpty ? contact.lastName[0] : '';
+
+    return '$firstLetter$secondLetter';
+  }
 }

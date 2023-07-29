@@ -65,7 +65,10 @@ class _ContactsListState extends State<ContactsList> {
                   visualDensity: const VisualDensity(
                     vertical: -3,
                   ),
-                  onTap: () => context.push(contactsViewPageId),
+                  onTap: () => context.go(
+                    contactsViewPageId,
+                    extra: widget.list[index],
+                  ),
                   title: Row(
                     children: [
                       Text(
