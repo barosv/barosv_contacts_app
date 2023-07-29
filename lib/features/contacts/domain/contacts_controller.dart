@@ -8,6 +8,10 @@ import 'package:barosv_contacts_app/injections/injection.dart';
 
 class ContactsController {
   Future<void> initDatabaseFromJSON() async {
+    // Just for testing
+    // getIt.get<ContactsRepository>().deleteAll();
+    // getIt.get<SharedPreferences>().setBool('jsonContactsAdded', false);
+
     // Checks if JSON was already added to the Database
     final jsonContactsAdded =
         getIt.get<SharedPreferences>().getBool('jsonContactsAdded') ?? false;

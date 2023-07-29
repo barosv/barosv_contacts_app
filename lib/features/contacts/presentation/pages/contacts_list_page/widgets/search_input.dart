@@ -1,8 +1,8 @@
-import 'package:barosv_contacts_app/shared/utils.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart'
-    show Colors, InkWell, InputDecoration, TextField;
+import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
+import 'package:barosv_contacts_app/shared/utils.dart';
 
 class SearchInput extends StatefulWidget {
   final VoidCallback onCancel;
@@ -44,6 +44,12 @@ class _SearchInputState extends State<SearchInput> {
             child: TextField(
               controller: _controller,
               decoration: InputDecoration(
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(15.0),
+                ),
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(15.0),
+                ),
                 hintText: AppLocalizations.of(context)!.search,
                 prefixIcon: const Icon(CupertinoIcons.search),
               ),
@@ -57,8 +63,8 @@ class _SearchInputState extends State<SearchInput> {
                 setState(() {
                   _controller.text = '';
                   _showCancelButton = false;
-                  hideKeyboard();
                 });
+                hideKeyboard();
               },
               child: Text(
                 AppLocalizations.of(context)!.cancel,

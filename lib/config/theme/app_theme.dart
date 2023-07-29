@@ -1,3 +1,4 @@
+import 'package:barosv_contacts_app/shared/color_constants.dart';
 import 'package:flutter/material.dart';
 
 ThemeData theme() => ThemeData(
@@ -7,17 +8,19 @@ ThemeData theme() => ThemeData(
       ),
       iconTheme: const IconThemeData(color: Colors.white),
       inputDecorationTheme: InputDecorationTheme(
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(15.0),
+        enabledBorder: const OutlineInputBorder(
+          borderRadius: BorderRadius.zero,
+          borderSide: BorderSide(color: Colors.transparent),
         ),
-        focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(15.0),
+        focusedBorder: const OutlineInputBorder(
+          borderRadius: BorderRadius.zero,
+          borderSide: BorderSide(color: Colors.transparent),
         ),
-        isDense: true,
-        fillColor: Colors.grey.shade900,
+        fillColor: secondaryColorDark,
         filled: true,
+        isDense: true,
+        hintStyle: TextStyle(color: Colors.grey.shade600),
         iconColor: Colors.grey,
-        hintStyle: const TextStyle(color: Colors.grey),
       ),
       listTileTheme: const ListTileThemeData(
         textColor: Colors.white,

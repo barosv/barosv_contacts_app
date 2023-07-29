@@ -2,8 +2,23 @@
     "appName": "Barosv Contacts List",
     "@appName": {"description": "App name"},
     
+    "addAddress": "add address",
+    "@addAddress": {"description": "add address"},
+    
+    "streetAddress1": "Street Address 1",
+    "@streetAddress1": {"description": "Street Address 1"},
+    
+    "streetAddress2": "Street Address 2",
+    "@streetAddress2": {"description": "Street Address 2"},
+    
+    "addPhone": "add phone",
+    "@addPhone": {"description": "add phone"},
+    
     "cancel": "Cancel",
     "@cancel": {"description": "Cancel"},
+    
+    "city": "City",
+    "@city": {"description": "City"},
     
     "contacts": "Contacts",
     "@contacts": {"description": "Contacts"},
@@ -11,8 +26,38 @@
     "checkSpelling": "Check the spelling or try a new search.",
     "@checkSpelling": {"description": "Note for checking spelling"},
     
+    "done": "Done",
+    "@done": {"description": "Done"},
+    
+    "firstName": "First name",
+    "@firstName": {"description": "First name"},
+    
+    "home": "home",
+    "@home": {"description": "home"},
+    
+    "lastName": "Last name",
+    "@lastName": {"description": "Last name"},
+    
+    "mobile": "mobile",
+    "@mobile": {"description": "mobile"},
+    
+    "newContact": "New Contact",
+    "@newContact": {"description": "New Contact"},
+    
+    "phoneNumber": "Phone",
+    "@phoneNumber": {"description": "Phone"},
+    
+    "save": "Save",
+    "@save": {"description": "Save"},
+    
     "search": "Search",
     "@search": {"description": "Search"},
+    
+    "state": "State",
+    "@state": {"description": "State"},
+    
+    "zipCode": "Zip Code",
+    "@zipCode": {"description": "Zip Code"},
 
     "infoContactCreated": "Contact \"{name}\" has been created",
     "@infoContactCreated": {"description": "Info message when a contact is created",
@@ -30,5 +75,8 @@
                 "type": "String"
             }
         }
-    }
+    },
+    
+    "noContacts": "No records found.\n\nEnjoy adding your contacts through the + button!",
+    "@noContacts": {"description": "Message to indicate that there are no contacts in the database"}
 }

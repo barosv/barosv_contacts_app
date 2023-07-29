@@ -36,6 +36,19 @@ class Contact {
     required this.zipCode,
   });
 
+  Contact.empty({
+    this.id = 0,
+    this.contactID = '',
+    this.firstName = '',
+    this.lastName = '',
+    this.phoneNumber = '',
+    this.streetAddress1 = '',
+    this.streetAddress2 = '',
+    this.city = '',
+    this.state = '',
+    this.zipCode = '',
+  });
+
   factory Contact.fromJson(Map<String, dynamic> json) {
     return Contact(
       id: 0,

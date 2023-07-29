@@ -1,35 +1,26 @@
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart' show Colors;
+import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
+import 'package:barosv_contacts_app/shared/color_constants.dart';
+
 class NoResults extends StatelessWidget {
-  final String value;
-  const NoResults(this.value, {super.key});
+  const NoResults({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        const Icon(
-          CupertinoIcons.search,
-          color: Colors.grey,
-          size: 50.0,
-        ),
-        const SizedBox(height: 15.0),
-        Text(
-          AppLocalizations.of(context)!.noResults(value),
-          style: const TextStyle(
+    return Padding(
+      padding: const EdgeInsets.all(20.0),
+      child: Center(
+        child: Text(
+          AppLocalizations.of(context)!.noContacts,
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            color: secondaryColor,
             fontSize: 18.0,
             fontWeight: FontWeight.bold,
           ),
         ),
-        const SizedBox(height: 5.0),
-        Text(
-          AppLocalizations.of(context)!.checkSpelling,
-          style: const TextStyle(color: Colors.grey),
-        ),
-      ],
+      ),
     );
   }
 }

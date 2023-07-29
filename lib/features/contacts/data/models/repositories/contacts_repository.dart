@@ -10,9 +10,9 @@ class ContactsRepository {
   List<Contact> search({String search = ''}) {
     return _contactsBox
         .query(
-          Contact_.firstName.contains(search).or(
-                Contact_.lastName.contains(search),
-              ),
+          Contact_.firstName
+              .contains(search, caseSensitive: false)
+              .or(Contact_.lastName.contains(search, caseSensitive: false)),
         )
         .order(Contact_.lastName)
         .order(Contact_.firstName)

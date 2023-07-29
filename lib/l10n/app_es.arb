@@ -2,8 +2,23 @@
     "appName": "Barosv Contacts List",
     "@appName": {"description": "App name"},
     
+    "addAddress": "agregar dirección",
+    "@addAddress": {"description": "agregar dirección"},
+    
+    "streetAddress1": "Dirección calle 1",
+    "@streetAddress1": {"description": "Dirección calle 1"},
+    
+    "streetAddress2": "Dirección calle 2",
+    "@streetAddress2": {"description": "Dirección calle 2"},
+    
+    "addPhone": "agregar teléfono",
+    "@addPhone": {"description": "agregar teléfono"},
+    
     "cancel": "Cancelar",
     "@cancel": {"description": "Cancelar"},
+    
+    "city": "Ciudad",
+    "@city": {"description": "Ciudad"},
     
     "contacts": "Contactos",
     "@contacts": {"description": "Contactos"},
@@ -11,8 +26,38 @@
     "checkSpelling": "Revise la ortografía o intente una nueva búsqueda.",
     "@checkSpelling": {"description": "Nota para revisar la ortografía"},
     
+    "done": "Finalizar",
+    "@done": {"description": "Finalizar"},
+    
+    "firstName": "Nombre",
+    "@firstName": {"description": "Nombre"},
+    
+    "home": "hogar",
+    "@home": {"description": "hogar"},
+    
+    "lastName": "Apellidos",
+    "@lastName": {"description": "Apellidos"},
+    
+    "mobile": "móvil",
+    "@mobile": {"description": "móvil"},
+    
+    "newContact": "Nuevo Contacto",
+    "@newContact": {"description": "Nuevo Contacto"},
+    
+    "phoneNumber": "Teléfono",
+    "@phoneNumber": {"description": "Teléfono"},
+    
+    "save": "Guardar",
+    "@save": {"description": "Guardar"},
+    
     "search": "Buscar",
     "@search": {"description": "Buscar"},
+    
+    "state": "Estado/Provincia",
+    "@state": {"description": "Estado/Provincia"},
+    
+    "zipCode": "Código Postal",
+    "@zipCode": {"description": "Código Postal"},
 
     "infoContactCreated": "El contacto \"{name}\" ha sido creado",
     "@infoContactCreated": {"description": "Mensaje informativo indicando que el contacto ha sido creado",
@@ -30,5 +75,8 @@
                 "type": "String"
             }
         }
-    }
+    },
+    
+    "noContacts": "No se han encontrado registros.\n\n¡Disfruta agregando tus contactos utilizando el botón +!",
+    "@noContacts": {"description": "Mensaje indicando que no hay registros en la base de datos"}
 }
