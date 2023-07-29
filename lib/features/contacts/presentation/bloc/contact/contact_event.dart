@@ -1,5 +1,6 @@
-import 'package:barosv_contacts_app/features/contacts/data/models/contact.dart';
 import 'package:equatable/equatable.dart';
+
+import 'package:barosv_contacts_app/features/contacts/data/models/contact.dart';
 
 abstract class ContactsEvent extends Equatable {
   const ContactsEvent();

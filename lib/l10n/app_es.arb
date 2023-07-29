@@ -1,11 +1,32 @@
 {
     "appName": "Barosv Contacts List",
     "@appName": {"description": "App name"},
+    
+    "cancel": "Cancelar",
+    "@cancel": {"description": "Cancelar"},
+    
+    "contacts": "Contactos",
+    "@contacts": {"description": "Contactos"},
+    
+    "checkSpelling": "Revise la ortografía o intente una nueva búsqueda.",
+    "@checkSpelling": {"description": "Nota para revisar la ortografía"},
+    
+    "search": "Buscar",
+    "@search": {"description": "Buscar"},
 
     "infoContactCreated": "El contacto \"{name}\" ha sido creado",
     "@infoContactCreated": {"description": "Mensaje informativo indicando que el contacto ha sido creado",
         "placeholders": {
             "name": {
+                "type": "String"
+            }
+        }
+    },
+
+    "noResults": "Sin Resultados para \"{value}\"",
+    "@noResults": {"description": "Mensaje cuando no hay resultados",
+        "placeholders": {
+            "value": {
                 "type": "String"
             }
         }

@@ -36,11 +36,6 @@ class Contact {
     required this.zipCode,
   });
 
-  // Objectbox needs a default constructor
-  // Contact.empty();
-
-  // Add any required methods here
-
   factory Contact.fromJson(Map<String, dynamic> json) {
     return Contact(
       id: 0,

@@ -1,13 +1,12 @@
 import 'package:get_it/get_it.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:path/path.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import 'package:barosv_contacts_app/features/contacts/data/models/contact.dart';
 import 'package:barosv_contacts_app/features/contacts/data/models/repositories/contacts_repository.dart';
 import 'package:barosv_contacts_app/features/contacts/domain/contacts_controller.dart';
-// import 'package:barosv_contacts_app/injections/injection.config.dart';
 import 'package:barosv_contacts_app/objectbox.g.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 final getIt = GetIt.instance;
 

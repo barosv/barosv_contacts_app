@@ -14,14 +14,19 @@ class ContactsRepository {
                 Contact_.lastName.contains(search),
               ),
         )
-        .order(Contact_.firstName, flags: Order.descending)
-        .order(Contact_.lastName, flags: Order.descending)
+        .order(Contact_.lastName)
+        .order(Contact_.firstName)
         .build()
         .find();
   }
 
   // Get all Contacts
-  List<Contact> getAll() => _contactsBox.getAll();
+  List<Contact> getAll() => _contactsBox
+      .query()
+      .order(Contact_.lastName)
+      .order(Contact_.firstName)
+      .build()
+      .find();
 
   // Get a single Contact
   Contact? get(int id) => _contactsBox.get(id);
