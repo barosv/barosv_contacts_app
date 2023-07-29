@@ -22,7 +22,7 @@ class ContactsController {
     List<Contact> contacts = await contactsDataSource.readContactsFromJson();
 
     // Saves all contacts in the Database
-    final contactsIds = getIt.get<ContactsRepository>().saveContacts(contacts);
+    final contactsIds = getIt.get<ContactsRepository>().createAll(contacts);
 
     // Updates all Contacts IDs
     for (int contactindex = 0; contactindex < contacts.length; contactindex++) {
@@ -34,5 +34,35 @@ class ContactsController {
     getIt.get<SharedPreferences>().setBool('jsonContactsAdded', true);
   }
 
-  getNextContacts({String search = ''}) async {}
+  // Search
+  List<Contact> search({String search = ''}) {
+    return getIt.get<ContactsRepository>().search(search: search);
+  }
+
+  // Get all Contacts
+  List<Contact> getAll() => getIt.get<ContactsRepository>().getAll();
+
+  // Get a single Contact
+  Contact? get(int id) => getIt.get<ContactsRepository>().get(id);
+
+  // Create a new Contact
+  int create(Contact contact) {
+    return getIt.get<ContactsRepository>().update(contact);
+  }
+
+  // Update a Contact
+  int update(Contact contact) {
+    return getIt.get<ContactsRepository>().update(contact);
+  }
+
+  // Create a new list of Contacts
+  List<int> createAll(List<Contact> contacts) {
+    return getIt.get<ContactsRepository>().createAll(contacts);
+  }
+
+  // Delete a Contact
+  bool delete(int id) => getIt.get<ContactsRepository>().delete(id);
+
+  // Delete all
+  int deleteAll() => getIt.get<ContactsRepository>().deleteAll();
 }

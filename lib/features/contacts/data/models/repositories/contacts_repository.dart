@@ -6,8 +6,8 @@ class ContactsRepository {
 
   ContactsRepository(this._contactsBox);
 
-  // Get list
-  List<Contact> getontacts({String search = ''}) {
+  // Search
+  List<Contact> search({String search = ''}) {
     return _contactsBox
         .query(
           Contact_.firstName.contains(search).or(
@@ -20,18 +20,23 @@ class ContactsRepository {
         .find();
   }
 
+  // Get all Contacts
+  List<Contact> getAll() => _contactsBox.getAll();
+
   // Get a single Contact
-  Contact? getContactById(int id) => _contactsBox.get(id);
+  Contact? get(int id) => _contactsBox.get(id);
 
-  // Create/Update a Contact
-  int saveContact(Contact contact) => _contactsBox.put(contact);
+  // Create a new Contact
+  int create(Contact contact) => _contactsBox.put(contact);
 
-  // Create/Update a list of Contacts
-  List<int> saveContacts(List<Contact> contacts) =>
-      _contactsBox.putMany(contacts);
+  // Update a Contact
+  int update(Contact contact) => _contactsBox.put(contact);
+
+  // Create a new list of Contacts
+  List<int> createAll(List<Contact> contacts) => _contactsBox.putMany(contacts);
 
   // Delete a Contact
-  bool deleteContact(int id) => _contactsBox.remove(id);
+  bool delete(int id) => _contactsBox.remove(id);
 
   // Delete all
   int deleteAll() => _contactsBox.removeAll();
