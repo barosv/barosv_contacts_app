@@ -20,9 +20,19 @@ class ContactsRepository {
         .find();
   }
 
+  // Get a single Contact
   Contact? getContactById(int id) => _contactsBox.get(id);
 
+  // Create/Update a Contact
   int saveContact(Contact contact) => _contactsBox.put(contact);
 
+  // Create/Update a list of Contacts
+  List<int> saveContacts(List<Contact> contacts) =>
+      _contactsBox.putMany(contacts);
+
+  // Delete a Contact
   bool deleteContact(int id) => _contactsBox.remove(id);
+
+  // Delete all
+  int deleteAll() => _contactsBox.removeAll();
 }

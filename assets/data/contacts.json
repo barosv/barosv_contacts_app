@@ -1,0 +1,112 @@
+[
+    {
+      "contactID": "ABC123xyz9",
+      "firstName": "John",
+      "lastName": "Doe",
+      "phoneNumber": "(555) 123-4567",
+      "streetAddress1": "Main Street",
+      "streetAddress2": "Oak Avenue",
+      "state": "California",
+      "city": "Los Angeles",
+      "zipCode": "90001"
+    },
+    {
+      "contactID": "PQR789abc2",
+      "firstName": "Jane",
+      "lastName": "Smith",
+      "phoneNumber": "(555) 987-6543",
+      "streetAddress1": "Broadway",
+      "streetAddress2": "Elm Street",
+      "state": "New York",
+      "city": "New York City",
+      "zipCode": "10001"
+    },
+    {
+      "contactID": "LMN456def5",
+      "firstName": "Robert",
+      "lastName": "Johnson",
+      "phoneNumber": "(555) 555-5555",
+      "streetAddress1": "Main Street",
+      "streetAddress2": "Oak Avenue",
+      "state": "California",
+      "city": "Los Angeles",
+      "zipCode": "90001"
+    },
+    {
+      "contactID": "XYZ987pqr0",
+      "firstName": "Emily",
+      "lastName": "Brown",
+      "phoneNumber": "(555) 111-2222",
+      "streetAddress1": "Maple Drive",
+      "streetAddress2": "Cedar Lane",
+      "state": "Texas",
+      "city": "Houston",
+      "zipCode": "77001"
+    },
+    {
+      "contactID": "DEF654lmn3",
+      "firstName": "Michael",
+      "lastName": "Lee",
+      "phoneNumber": "(555) 444-3333",
+      "streetAddress1": "Park Avenue",
+      "streetAddress2": "Sunset Boulevard",
+      "state": "California",
+      "city": "Los Angeles",
+      "zipCode": "90001"
+    },
+    {
+      "contactID": "UVW321xyz8",
+      "firstName": "Sarah",
+      "lastName": "Wilson",
+      "phoneNumber": "(555) 777-8888",
+      "streetAddress1": "Church Street",
+      "streetAddress2": "Elm Street",
+      "state": "New York",
+      "city": "New York City",
+      "zipCode": "10001"
+    },
+    {
+      "contactID": "GHI987jkl6",
+      "firstName": "Christopher",
+      "lastName": "Davis",
+      "phoneNumber": "(555) 222-3333",
+      "streetAddress1": "Main Street",
+      "streetAddress2": "Broadway",
+      "state": "Texas",
+      "city": "Houston",
+      "zipCode": "77001"
+    },
+    {
+      "contactID": "JKL123mno4",
+      "firstName": "Linda",
+      "lastName": "Martinez",
+      "phoneNumber": "(555) 999-1111",
+      "streetAddress1": "Elm Street",
+      "streetAddress2": "Oak Avenue",
+      "state": "California",
+      "city": "Los Angeles",
+      "zipCode": "90001"
+    },
+    {
+      "contactID": "MNO789pqr1",
+      "firstName": "David",
+      "lastName": "Clark",
+      "phoneNumber": "(555) 777-9999",
+      "streetAddress1": "Park Avenue",
+      "streetAddress2": "Main Street",
+      "state": "Texas",
+      "city": "Houston",
+      "zipCode": "77001"
+    },
+    {
+      "contactID": "HIJ456stu7",
+      "firstName": "Jennifer",
+      "lastName": "Taylor",
+      "phoneNumber": "(555) 333-4444",
+      "streetAddress1": "Broadway",
+      "streetAddress2": "Maple Drive",
+      "state": "New York",
+      "city": "New York City",
+      "zipCode": "10001"
+    }
+  ]

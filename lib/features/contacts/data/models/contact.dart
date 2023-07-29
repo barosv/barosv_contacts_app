@@ -4,15 +4,24 @@ import 'package:objectbox/objectbox.dart';
 class Contact {
   int id;
 
-  final String contactID;
-  final String firstName;
-  final String lastName;
-  final String phoneNumber;
-  final String streetAddress1;
-  final String streetAddress2;
-  final String city;
-  final String state;
-  final String zipCode;
+  @Property()
+  String contactID;
+  @Property()
+  String firstName;
+  @Property()
+  String lastName;
+  @Property()
+  String phoneNumber;
+  @Property()
+  String streetAddress1;
+  @Property()
+  String streetAddress2;
+  @Property()
+  String city;
+  @Property()
+  String state;
+  @Property()
+  String zipCode;
 
   Contact({
     required this.id,
@@ -27,9 +36,14 @@ class Contact {
     required this.zipCode,
   });
 
+  // Objectbox needs a default constructor
+  // Contact.empty();
+
+  // Add any required methods here
+
   factory Contact.fromJson(Map<String, dynamic> json) {
     return Contact(
-      id: json['id'],
+      id: 0,
       contactID: json['contactID'],
       firstName: json['firstName'],
       lastName: json['lastName'],
@@ -40,5 +54,19 @@ class Contact {
       state: json['state'],
       zipCode: json['zipCode'],
     );
+  }
+
+  Map<String, dynamic> toJson() {
+    return {
+      'contactID': contactID,
+      'firstName': firstName,
+      'lastName': lastName,
+      'phoneNumber': phoneNumber,
+      'streetAddress1': streetAddress1,
+      'streetAddress2': streetAddress2,
+      'city': city,
+      'state': state,
+      'zipCode': zipCode,
+    };
   }
 }
