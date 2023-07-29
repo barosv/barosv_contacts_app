@@ -1,8 +1,12 @@
 import 'dart:async';
 
+import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+
 import 'package:barosv_contacts_app/features/contacts/domain/contacts_controller.dart';
 import 'package:barosv_contacts_app/injections/injection.dart';
-import 'package:flutter/material.dart';
+import 'package:barosv_contacts_app/shared/pages_ids.dart'
+    show contactsListPageId;
 
 class SplashPage extends StatefulWidget {
   static const String id = '/';
@@ -39,18 +43,7 @@ class _SplashPageState extends State<SplashPage> {
   }
 
   void _goToSearch() {
-    Navigator.push(
-      context,
-      MaterialPageRoute<void>(
-        builder: (BuildContext context) => const SafeArea(
-          child: Scaffold(
-            body: Center(
-              child: Text('NEW PAGE'),
-            ),
-          ),
-        ),
-      ),
-    );
+    context.go(contactsListPageId);
   }
 
   @override

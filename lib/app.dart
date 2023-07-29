@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-import 'package:barosv_contacts_app/features/splash/splash_screen.dart';
+import 'package:barosv_contacts_app/router.dart';
 
 class ContactsApp extends StatelessWidget {
   const ContactsApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       title: 'Barosv Contacts List',
       theme: ThemeData(
         iconTheme: const IconThemeData(color: Colors.white),
@@ -24,7 +24,7 @@ class ContactsApp extends StatelessWidget {
           bodyText2: TextStyle(color: Colors.white),
         ),
       ),
-      home: const SplashPage(),
+      routerConfig: router,
     );
   }
 }

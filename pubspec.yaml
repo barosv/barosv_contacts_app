@@ -47,6 +47,9 @@ dependencies:
   # For dependency injection, state management and more
   get_it: ^7.6.0
 
+  # For app navigation
+  go_router: ^8.2.0
+
   # For texts internationalization
   intl: ^0.17.0
 
