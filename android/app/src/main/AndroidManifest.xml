@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="barrantes.osvaldo.contacts.barosv_contacts_app">
    <application
-        android:label="barosv_contacts_app"
+        android:label="Barosv Contacts"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
