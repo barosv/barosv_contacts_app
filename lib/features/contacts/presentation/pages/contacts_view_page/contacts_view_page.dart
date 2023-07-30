@@ -67,27 +67,29 @@ class ContactsViewPage extends StatelessWidget {
           padding: const EdgeInsets.all(15.0),
           child: contact == null
               ? const ContactError()
-              : Column(
-                  children: [
-                    LogoAndName(
-                      letters: letters!,
-                      name: '${contact!.firstName} ${contact!.lastName}',
-                    ),
-                    const ContactButtons(),
-
-                    // NAME
-                    Segment(
-                      content: Text(
-                        contact!.phoneNumber,
-                        style: const TextStyle(color: Colors.blue),
+              : SingleChildScrollView(
+                  child: Column(
+                    children: [
+                      LogoAndName(
+                        letters: letters ?? '--',
+                        name: '${contact!.firstName} ${contact!.lastName}',
                       ),
-                      label: AppLocalizations.of(context)!.mobile,
-                    ),
-                    const SizedBox(height: 15.0),
+                      const ContactButtons(),
 
-                    // ADDRESS
-                    AddressSegmenet(contact: contact!),
-                  ],
+                      // NAME
+                      Segment(
+                        content: Text(
+                          contact!.phoneNumber,
+                          style: const TextStyle(color: Colors.blue),
+                        ),
+                        label: AppLocalizations.of(context)!.mobile,
+                      ),
+                      const SizedBox(height: 15.0),
+
+                      // ADDRESS
+                      AddressSegmenet(contact: contact!),
+                    ],
+                  ),
                 ),
         ),
       ),
