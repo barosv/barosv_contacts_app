@@ -38,11 +38,13 @@ class ContactFormState extends State<ContactForm> {
   @override
   void initState() {
     _contact = widget.contact;
+
     _firstNameController.text = _contact.firstName;
     _lastNameController.text = _contact.lastName;
 
     _phoneNotifier = ValueNotifier(!widget.isNew);
     _addressNotifier = ValueNotifier(!widget.isNew);
+
     super.initState();
   }
 
@@ -143,13 +145,7 @@ class ContactFormState extends State<ContactForm> {
             }
 
             return Segment(
-              content: AddressForm(
-                contact: _contact,
-                onChanged: (value) {
-                  _contact = value;
-                  widget.onChanged(_contact);
-                },
-              ),
+              content: AddressForm(contact: _contact),
               hint: AppLocalizations.of(context)!.phoneNumber,
               label: AppLocalizations.of(context)!.home,
               onDelete: () {

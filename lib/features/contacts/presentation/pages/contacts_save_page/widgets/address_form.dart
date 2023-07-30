@@ -5,42 +5,25 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:barosv_contacts_app/features/contacts/data/models/contact.dart';
 import 'package:barosv_contacts_app/features/contacts/presentation/pages/contacts_save_page/widgets/index.dart';
 
-class AddressForm extends StatefulWidget {
+class AddressForm extends StatelessWidget {
   final Contact contact;
-  final ValueChanged<Contact> onChanged;
 
   const AddressForm({
     super.key,
     required this.contact,
-    required this.onChanged,
   });
 
   @override
-  State<AddressForm> createState() => _AddressFormState();
-}
-
-class _AddressFormState extends State<AddressForm> {
-  // View elements
-  final divider = const SizedBox(height: 0.0);
-
-  late Contact _contact;
-
-  @override
-  void initState() {
-    _contact = widget.contact;
-    super.initState();
-  }
-
-  @override
   Widget build(BuildContext context) {
+    const divider = SizedBox(height: 0.0);
     return Column(
       children: [
         // STREET ADDRESS 1
         AddressInput(
           hint: AppLocalizations.of(context)!.streetAddress1,
           textInputType: TextInputType.streetAddress,
-          value: _contact.streetAddress1,
-          onChanged: (value) => _contact.streetAddress1 = value,
+          value: contact.streetAddress1,
+          onChanged: (value) => contact.streetAddress1 = value,
         ),
         divider,
 
@@ -48,24 +31,24 @@ class _AddressFormState extends State<AddressForm> {
         AddressInput(
           hint: AppLocalizations.of(context)!.streetAddress2,
           textInputType: TextInputType.streetAddress,
-          value: _contact.streetAddress2,
-          onChanged: (value) => _contact.streetAddress2 = value,
+          value: contact.streetAddress2,
+          onChanged: (value) => contact.streetAddress2 = value,
         ),
         divider,
 
         // CITY
         AddressInput(
           hint: AppLocalizations.of(context)!.city,
-          value: _contact.city,
-          onChanged: (value) => _contact.city = value,
+          value: contact.city,
+          onChanged: (value) => contact.city = value,
         ),
         divider,
 
         // STATE
         AddressInput(
           hint: AppLocalizations.of(context)!.state,
-          value: _contact.state,
-          onChanged: (value) => _contact.state = value,
+          value: contact.state,
+          onChanged: (value) => contact.state = value,
         ),
         divider,
 
@@ -73,8 +56,8 @@ class _AddressFormState extends State<AddressForm> {
         AddressInput(
           hint: AppLocalizations.of(context)!.zipCode,
           textInputType: TextInputType.number,
-          value: _contact.zipCode,
-          onChanged: (value) => _contact.zipCode = value,
+          value: contact.zipCode,
+          onChanged: (value) => contact.zipCode = value,
         ),
       ],
     );

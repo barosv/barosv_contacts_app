@@ -22,20 +22,20 @@ class AddressInput extends StatefulWidget {
 }
 
 class _AddressInputState extends State<AddressInput> {
-  final _streetAddress1Controller = TextEditingController();
+  final _controller = TextEditingController();
 
   late String _value;
 
   @override
   void initState() {
-    _streetAddress1Controller.text = widget.value;
+    _controller.text = widget.value;
     _value = widget.value;
     super.initState();
   }
 
   @override
   void dispose() {
-    _streetAddress1Controller.dispose();
+    _controller.dispose();
     super.dispose();
   }
 
@@ -43,7 +43,7 @@ class _AddressInputState extends State<AddressInput> {
   Widget build(BuildContext context) {
     return TextField(
       autofocus: true,
-      controller: _streetAddress1Controller,
+      controller: _controller,
       onChanged: (value) {
         setState(() => _value = value);
         widget.onChanged(_value);
@@ -56,7 +56,7 @@ class _AddressInputState extends State<AddressInput> {
             ? const SizedBox.shrink()
             : GestureDetector(
                 onTap: () {
-                  _streetAddress1Controller.clear();
+                  _controller.clear();
                   setState(() => _value = '');
                   widget.onChanged(_value);
                 },
