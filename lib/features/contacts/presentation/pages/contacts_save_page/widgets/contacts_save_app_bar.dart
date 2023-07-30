@@ -3,12 +3,15 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:go_router/go_router.dart';
 
 class ContactsSaveAppBar extends StatelessWidget with PreferredSizeWidget {
+  final bool isNew;
   final VoidCallback onSave;
+
   @override
   final Size preferredSize;
 
   const ContactsSaveAppBar({
     super.key,
+    required this.isNew,
     required this.onSave,
   }) : preferredSize = const Size.fromHeight(kToolbarHeight);
 
@@ -16,7 +19,7 @@ class ContactsSaveAppBar extends StatelessWidget with PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
       centerTitle: true,
-      title: Text(AppLocalizations.of(context)!.newContact),
+      title: isNew ? Text(AppLocalizations.of(context)!.newContact) : null,
       leading: Row(
         children: [
           const SizedBox(width: 10.0),

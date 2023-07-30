@@ -5,10 +5,12 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:barosv_contacts_app/shared/color_constants.dart';
 
 class PhoneForm extends StatefulWidget {
+  final String value;
   final ValueChanged<String> onChanged;
 
   const PhoneForm({
     super.key,
+    required this.value,
     required this.onChanged,
   });
 
@@ -20,6 +22,12 @@ class _PhoneFormState extends State<PhoneForm> {
   final _controller = TextEditingController();
 
   String _value = '';
+
+  @override
+  void initState() {
+    _controller.text = widget.value;
+    super.initState();
+  }
 
   @override
   void dispose() {
@@ -51,7 +59,7 @@ class _PhoneFormState extends State<PhoneForm> {
                 child: Icon(
                   CupertinoIcons.clear_circled_solid,
                   color: secondaryColor,
-                  size: 18.0,
+                  size: 17.0,
                 ),
               ),
       ),

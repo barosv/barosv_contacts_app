@@ -1,10 +1,7 @@
-import 'package:barosv_contacts_app/features/contacts/data/models/contact.dart';
 import 'package:go_router/go_router.dart';
 
-import 'package:barosv_contacts_app/features/contacts/presentation/pages/contacts_save_page/contacts_save_page.dart';
-import 'package:barosv_contacts_app/features/contacts/presentation/pages/contacts_search_page/contacts_search_page.dart';
-import 'package:barosv_contacts_app/features/contacts/presentation/pages/contacts_list_page/contacts_list_page.dart';
-import 'package:barosv_contacts_app/features/contacts/presentation/pages/contacts_view_page/contacts_view_page.dart';
+import 'package:barosv_contacts_app/features/contacts/data/models/contact.dart';
+import 'package:barosv_contacts_app/features/contacts/presentation/pages/index.dart';
 import 'package:barosv_contacts_app/features/splash/splash_screen.dart';
 
 import 'package:barosv_contacts_app/shared/pages_ids.dart';
@@ -21,7 +18,9 @@ final router = GoRouter(
     ),
     GoRoute(
       path: contactsSavePageId,
-      builder: (context, state) => const ContactsSavePage(),
+      builder: (context, state) => ContactsSavePage(
+        contact: state.extra as Contact?,
+      ),
     ),
     GoRoute(
       path: contactsSearchPageId,

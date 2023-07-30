@@ -28,6 +28,7 @@ class _AddressInputState extends State<AddressInput> {
 
   @override
   void initState() {
+    _streetAddress1Controller.text = widget.value;
     _value = widget.value;
     super.initState();
   }
@@ -62,7 +63,7 @@ class _AddressInputState extends State<AddressInput> {
                 child: Icon(
                   CupertinoIcons.clear_circled_solid,
                   color: secondaryColor,
-                  size: 18.0,
+                  size: 17.0,
                 ),
               ),
       ),

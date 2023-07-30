@@ -7,11 +7,13 @@ import 'index.dart';
 
 class ContactForm extends StatefulWidget {
   final Contact contact;
+  final bool isNew;
   final ValueChanged<Contact> onChanged;
 
   const ContactForm({
     super.key,
     required this.contact,
+    required this.isNew,
     required this.onChanged,
   });
 
@@ -28,14 +30,19 @@ class ContactFormState extends State<ContactForm> {
   final _lastNameController = TextEditingController();
 
   // View notifiers
-  final _phoneNotifier = ValueNotifier(false);
-  final _addressNotifier = ValueNotifier(false);
+  late ValueNotifier<bool> _phoneNotifier;
+  late ValueNotifier<bool> _addressNotifier;
 
   late Contact _contact;
 
   @override
   void initState() {
     _contact = widget.contact;
+    _firstNameController.text = _contact.firstName;
+    _lastNameController.text = _contact.lastName;
+
+    _phoneNotifier = ValueNotifier(!widget.isNew);
+    _addressNotifier = ValueNotifier(!widget.isNew);
     super.initState();
   }
 
@@ -61,6 +68,7 @@ class ContactFormState extends State<ContactForm> {
               // FIRST NAME
               TextFormField(
                 controller: _firstNameController,
+                autofocus: true,
                 onChanged: (value) {
                   _contact.firstName = value;
                   widget.onChanged(_contact);
@@ -105,6 +113,7 @@ class ContactFormState extends State<ContactForm> {
 
             return Segment(
               content: PhoneForm(
+                value: _contact.phoneNumber,
                 onChanged: (value) {
                   _contact.phoneNumber = value;
                   widget.onChanged(_contact);
@@ -112,7 +121,10 @@ class ContactFormState extends State<ContactForm> {
               ),
               hint: AppLocalizations.of(context)!.phoneNumber,
               label: AppLocalizations.of(context)!.mobile,
-              onDelete: () => _phoneNotifier.value = false,
+              onDelete: () {
+                _contact.phoneNumber = '';
+                _phoneNotifier.value = false;
+              },
             );
           },
         ),
@@ -140,7 +152,14 @@ class ContactFormState extends State<ContactForm> {
               ),
               hint: AppLocalizations.of(context)!.phoneNumber,
               label: AppLocalizations.of(context)!.home,
-              onDelete: () => _addressNotifier.value = false,
+              onDelete: () {
+                _contact.streetAddress1 = '';
+                _contact.streetAddress2 = '';
+                _contact.city = '';
+                _contact.state = '';
+                _contact.zipCode = '';
+                _addressNotifier.value = false;
+              },
             );
           },
         ),

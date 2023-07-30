@@ -35,6 +35,9 @@
     "checkSpelling": "Revise la ortografía o intente una nueva búsqueda.",
     "@checkSpelling": {"description": "Nota para revisar la ortografía"},
     
+    "delete": "Eliminar Contacto",
+    "@delete": {"description": "Eliminar Contacto"},
+    
     "done": "Finalizar",
     "@done": {"description": "Finalizar"},
     

@@ -35,6 +35,9 @@
     "checkSpelling": "Check the spelling or try a new search.",
     "@checkSpelling": {"description": "Note for checking spelling"},
     
+    "delete": "Delete Contact",
+    "@delete": {"description": "Delete Contact"},
+    
     "done": "Done",
     "@done": {"description": "Done"},
     

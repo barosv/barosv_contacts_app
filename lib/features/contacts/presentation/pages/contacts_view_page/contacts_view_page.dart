@@ -12,6 +12,7 @@ import 'widgets/index.dart';
 
 class ContactsViewPage extends StatelessWidget {
   final Contact? contact;
+
   const ContactsViewPage({super.key, required this.contact});
 
   @override
