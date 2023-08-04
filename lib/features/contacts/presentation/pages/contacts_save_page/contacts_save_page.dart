@@ -84,6 +84,6 @@ class ContactsSavePage extends StatelessWidget {
 
   void _delete({required BuildContext context, required int value}) {
     context.read<ContactsBloc>().add(Delete(id: value));
-    context.push(contactsListPageId);
+    context.go(contactsListPageId);
   }
 }

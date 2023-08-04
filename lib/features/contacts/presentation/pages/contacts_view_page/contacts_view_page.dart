@@ -19,12 +19,28 @@ class ContactsViewPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final letters = getIt.get<ContactsController>().getContactLetters(contact);
 
+    final newContact = Contact(
+      id: contact!.id,
+      contactID: contact!.contactID,
+      firstName: contact!.firstName,
+      lastName: contact!.lastName,
+      phoneNumber: contact!.phoneNumber,
+      streetAddress1: contact!.streetAddress1,
+      streetAddress2: contact!.streetAddress2,
+      city: contact!.city,
+      state: contact!.state,
+      zipCode: contact!.zipCode,
+    );
+
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
           actions: [
             InkWell(
-              onTap: () => context.push(contactsSavePageId, extra: contact),
+              onTap: () => context.push(
+                contactsSavePageId,
+                extra: newContact,
+              ),
               child: Align(
                 alignment: Alignment.center,
                 child: Text(
